@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application for managing trading orders with a user-friendly interface.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Real-time order placement
+- Support for Market and Limit orders
+- Buy and Sell order types
+- Quantity and price input validation
+- Order status tracking
+- Responsive modal interface
+- Loading state handling
 
-   ```bash
-   npm install
-   ```
+## Components
 
-2. Start the app
+### OrderModal
 
-   ```bash
-    npx expo start
-   ```
+The main component for placing trading orders with the following features:
 
-In the output, you'll find options to open the app in a
+- Order type selection (Market/Limit)
+- Order side selection (Buy/Sell)
+- Quantity input
+- Price input for limit orders
+- Investment amount calculation
+- Real-time validation
+- Status notifications
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Supporting Components
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Button: Customizable button component with primary/secondary styles
+- ToggleButtonGroup: Group of toggleable buttons for selections
+- Loading: Loading state indicator
 
-## Get a fresh project
-
-When you're ready, run:
+### Create .env file in the project root with the following
 
 ```bash
-npm run reset-project
+API_BASE_URL=
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Install dependencies
 
-## Learn more
+```bash
+yarn install
+```
+### Run the app in emulator or real device
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+yarn android
+# or
+yarn ios
+```

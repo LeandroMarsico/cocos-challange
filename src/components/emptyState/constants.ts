@@ -1,0 +1,1 @@
+export const TITILE = 'No se encontraron resultados.';
